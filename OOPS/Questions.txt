@@ -1,0 +1,14 @@
+1. What is a class and object in oops?
+ A class is a template definition of the methods
+ and variable s in a particular kind of object . 
+ Thus, an object is a specific instance of a class; 
+ it contains real values instead of variables. 
+ The class is one of the defining ideas of object-oriented programming.
+ 
+ 2. What is class attribute?
+ 
+ An attribute is another term for a field. 
+ It's typically a public constant or 
+ a public variable that can be accessed directly.
+ 
+ 3. 

@@ -1,0 +1,6 @@
+<?php  
+$con = mysql_connect("localhost", "root", "mypass");  
+$selectdb = mysql_select_db("tutorials",$con);  
+$result = mysql_query("select name,no_of_pages,no_of_pages from tutorials where t_id = '5'");  
+echo mysql_num_fields($result); // since three fields are fetched, retutns 3   
+?>   

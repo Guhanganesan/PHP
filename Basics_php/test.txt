@@ -1,0 +1,25 @@
+1) 	We can send 1024 bytes using GET method but POST method can transfer large amount of data
+	and POST is the secure method than GET method . POST method is invisible to others and has
+	no limits on the amount of information to send. 
+ 
+ 
+2) 	The header() function sends a raw HTTP header to a client browser.
+
+
+3) 	Redirect page in php: header("Location:index.php");
+
+
+4) 	mysql_fetch_assoc function Fetch a result row as an associative array,
+	While mysql_fetch_array() fetches an associative array, a numeric array, or both 
+
+5) 	The enctype attribute determines how the form-data should be encoded when submitting it to the server.
+	We need to set enctype as "multipart/form-data" when we are using a form for uploading files
+ 
+6) 	PEAR means “PHP Extension and Application Repository”.
+
+7) 	PHP includes only single inheritance, it means that a 
+	class can be extended from only one single class using the keyword ‘extended’.
+
+8) 	Final class means that this class cannot be extended and a final method cannot be overrided.
+
+9) 
