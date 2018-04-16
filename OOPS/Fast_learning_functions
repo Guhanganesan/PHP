@@ -1,0 +1,43 @@
+<?php
+      $x=100;
+      function getValue()
+	  {  global $x;
+	     $y=200;
+		 echo $x,$y;
+	  }
+	  getValue();
+	  echo $x;
+	  //echo $y;
+	  
+?>
+
+<?php
+      function add($x,$y)
+	  {  
+		 echo $x+$y;
+	  }
+	  add(100,200);
+	  
+	  function sub($x=200,$y=20)
+	  {  
+		 echo $x-$y;
+	  }
+	  sub(); 
+?>
+<br><br>
+
+<?php
+
+      function mul($x=10,$y=10)
+	  {  
+		 return $x*$y;
+	  }
+	  $m=mul(20,20);
+	  echo $m;
+?>
+
+
+
+
+
+
