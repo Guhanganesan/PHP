@@ -1,0 +1,61 @@
+<?php
+   abstract  class A{
+		 public $name="Guhan";
+		 private $user="root";
+		 protected $pass=1234;
+		 
+		 function getmydetails()
+		 {
+			 
+			 echo $this->name;
+			 echo $this->user;
+			 echo $this->pass;
+		 }
+		 abstract function run();
+		 
+	 }
+	 
+	 
+	 
+	 class B extends A{
+		  
+		  function getvalue()
+		  {
+			  echo $this->name;
+			  //echo $this->user;
+			  echo $this->pass;
+		  }
+		  function run()
+		  {
+			  echo "Running";
+		  }
+		 
+	 }
+	 
+	 
+	 $obj = new B();
+	 
+	 $obj->getValue();
+	 $obj->run();
+	 
+?>
+
+<?php
+      Interface C{
+		       function run();
+			   function go();
+			   
+	  }
+	  
+	  class D implements C
+	  {
+		  function run()
+		  {
+			  
+		  }
+		  function go()
+		  {
+			  
+		  }
+	  }
+?>
