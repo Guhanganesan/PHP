@@ -1,39 +1,74 @@
-PHP is a recursive acronym for PHP: Hypertext Preprocessor, a scripting language used to create dynamic and interactive HTML Web pages. A server processes PHP commands when a website visitor opens a page, then sends results to the visitor’s browser.
+PHP is a recursive acronym for PHP: Hypertext Preprocessor, a scripting language used to create dynamic and interactive HTML Web pages.
+A server processes PHP commands when a website visitor opens a page, then sends results to the visitor’s browser.
 
 
-Hypertext refers to a word, phrase or chunk of text that can be linked to another document or text. Hypertext covers both textual hyperlinks and graphical ones. The term was coined by Ted Nelson in the 1960s and is one of the key concepts that makes the Internet work. Without hypertext, following a link on a topic to a related article on that topic – one of the primary means of navigating the Web – would be impossible.
+Hypertext refers to a word, phrase or chunk of text that can be linked to another document or text. 
+Hypertext covers both textual hyperlinks and graphical ones. 
+The term was coined by Ted Nelson in the 1960s and is one of the key concepts that makes the Internet work. 
+Without hypertext, following a link on a topic to a related article on that topic – one of the primary means of navigating the 
+Web – would be impossible.
 
 
-
-
-The concept of hypertext was central to the creation of the World Wide Web. Through the use of textual links, Web pages written in HyperText Markup Language (HTML) can be linked and cross-referenced throughout the Web. Ted Nelson actually had a far grander vision for hypertext than Tim Berners-Lee’s World Wide Web, but his project, Xanadu is still under development many decades later.
+The concept of hypertext was central to the creation of the World Wide Web. Through the use of textual links, 
+Web pages written in HyperText Markup Language (HTML) can be linked and cross-referenced throughout the Web. 
+Ted Nelson actually had a far grander vision for hypertext than Tim Berners-Lee’s World Wide Web, but his project, 
+Xanadu is still under development many decades later.
 
 
 
 
 
 ------------------------Variable and Operators --------------
-<?php
-$String = "Hi Guhan";
-$a ="How are you!!!";
-printf('%s', $String);
-echo "<br>";
-print $a;
-?>
+
+<h2> Print and Printf</h2>
+	<?php
+	$String = "Hi Guhan";
+	$a ="How are you!!!";
+	printf('%s', $String);
+	echo "<br>";
+	print $a;
+	?>
+
+<h2> Sscanf() </h2>
+
+	<?php
+	$x = "age:20";
+	sscanf($x,"age:%d", $age);
+	var_dump($age); // value and datatype
+	print($age);
+	/* The C library function int sscanf(const char *str, const char *format, ...) 
+	reads formatted input from a string. */
+	?>
+
+<h2> Sprintf() </h2>
+
+	<?php
+	$x = 100;
+	$y = "Guhan";
+	$check = sprintf("%s has %u books",$y,$x);
+	echo $check;
+	?> 
+
 
 <h2>Comments</h2>
 
-<?php
-// echo "";
-/* echo "";*/
-# echo "";
-echo "There are examples of comments in php";
-?>
-<?php
-echo "hi";
-echo "<br>";
-ECHO "ALL KEYWORDS ARE NOT CASE SENSITIVE";
-?>
+	<?php
+	// echo "";
+	/* echo "";*/
+	# echo "";
+	?>
+
+<h2> Case Sensitive </h2>
+
+  /*A case-sensitive program that expects you to enter all commands in uppercase will not respond correctly 
+   if you enter one or more characters in lowercase. It will treat the command RUN differently from run. 
+   Programs that do not distinguish between uppercase and lowercase are said to be case-insensitive. */
+
+	<?php
+	echo "hi";
+	echo "<br>";
+	ECHO "ALL KEYWORDS ARE NOT CASE SENSITIVE";
+	?>
 
 <?php
 echo 'How are you';
