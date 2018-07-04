@@ -70,40 +70,39 @@ Xanadu is still under development many decades later.
 	ECHO "ALL KEYWORDS ARE NOT CASE SENSITIVE";
 	?>
 
-<?php
-echo 'How are you';
-?>
-<br><br> 
-<?php 
-ecHo $_SERVER['PHP_SELF'];
-echo "<br>";//Returns the filename of the currently executing script.
-echo $_SERVER['SERVER_NAME'];
-echo "<br>";//
-echo $_SERVER['HTTP_HOST'];
-echo "<br>";//
-echo $_SERVER['HTTP_USER_AGENT'];
-echo "<br>";
-echo $_SERVER['SCRIPT_NAME'];
-echo "<br>";
-echo $_SERVER['REMOTE_PORT'];
-echo "<br>";
-echo $_SERVER['SERVER_PORT'];
-echo "<br>";
-?>
+<h2> Special Variables </h2>
 
-<?php// Bitwise operator
-echo 14&4;
-echo "<br>";
-echo 14 | 4;
-echo "<br>";
-echo 14^4;
-echo "<br>";
-echo ~14;
-echo "<br>";
-echo 3<<2;
-echo "<br>";
-echo 8>>2;
-?>
+	<?php 
+	ecHo $_SERVER['PHP_SELF'];
+	echo "<br>";//Returns the filename of the currently executing script.
+	echo $_SERVER['SERVER_NAME'];
+	echo "<br>";//
+	echo $_SERVER['HTTP_HOST'];
+	echo "<br>";//
+	echo $_SERVER['HTTP_USER_AGENT'];
+	echo "<br>";
+	echo $_SERVER['SCRIPT_NAME'];
+	echo "<br>";
+	echo $_SERVER['REMOTE_PORT'];
+	echo "<br>";
+	echo $_SERVER['SERVER_PORT'];
+	echo "<br>";
+	?>
+<h2> Bitwise Operator </h2>
+
+	<?php
+	echo 14&4;
+	echo "<br>";
+	echo 14 | 4;
+	echo "<br>";
+	echo 14^4;
+	echo "<br>";
+	echo ~14;
+	echo "<br>";
+	echo 3<<2;
+	echo "<br>";
+	echo 8>>2;
+	?>
 <br><br>
 <h2> Check Data Type</h2>
 <?php  // Check datatype
