@@ -21,13 +21,12 @@ Xanadu is still under development many decades later.
 ------------------------Variable and Operators --------------
 
 <h2> Print and Printf</h2>
+
 	<?php
 	$String = "Hi Guhan";
-	$a ="How are you!!!";
 	printf('%s', $String);
-	echo "<br>";
-	print $a;
 	?>
+
 
 <h2> Sscanf() </h2>
 
@@ -103,57 +102,109 @@ Xanadu is still under development many decades later.
 	echo "<br>";
 	echo 8>>2;
 	?>
-<br><br>
-<h2> Check Data Type</h2>
-<?php  // Check datatype
-$a=0.24;
-$b=2.4;
-$c="guhan";
-$d=array(1,2,3);
-if(is_int($a))
-{
-	echo "Integer<br>";
-}
-else
-{
-	echo "Not Integer<br>";
-}
-if(is_float($b))
-{
-	echo "float<br>";
-}
 
-if(is_string($c))
-{
-	echo "string<br>";
-}
-				///////////// 
+-------------------------------------------------------------------------------------------------------------------
 
-$var = "30";
-echo "The current datatype of var is: " . gettype($var) . "<br><br>";
-$var = (int)$var;
-echo "The current datatype of var is: " . gettype($var);
-echo "<br>";
-				/////////////////
+<h2> Check Data Type1 </h2>
+      
+       <?php
+		$a=0.24;
+		$b=2.4;
+		$c="guhan";
+		$d=array(1,2,3);
+		var_dump($a); //float(0.24)
+		var_dump($b); //float(2.4)
+		var_dump($c); //string(5) "guhan" 
+		var_dump($d); //array(3) { [0]=> int(1) [1]=> int(2) [2]=> int(3) }
+	?>
+--------------------------------------------------------------------------------------------------------------------
+<h2> Check Data Type2 </h2>
 
-$m=10;
-$n=3;
-$s=$m/$n;
-echo round($s,3);
-?>				
-<br><br>
+	<?php  // Check datatype
+	$a=0.24;
+	$b=2.4;
+	$c="guhan";
+	$d=array(1,2,3);
+	if(is_int($a))
+	{
+		echo "Integer<br>";
+	}
+	else
+	{
+		echo "Not Integer<br>";
+	}
+	if(is_float($b))
+	{
+		echo "float<br>";
+	}
 
+	if(is_string($c))
+	{
+		echo "string<br>";
+	}
+------------------------------------------------------------------------------------------------------------------------ 
+
+	<h2> Check Data Type3 </h2>
+	<?php
+		$a=0.24;
+		$b=2.4;
+		$c="guhan";
+		$d=array(1,2,3);
+		echo gettype($a); //double 
+		echo gettype($b); // double
+		echo gettype($c); // string
+		echo gettype($d); //array
+	?>
+	<?php
+		$a=2.4;
+		$m=(int)$a;
+		print($m);//0 for $a=0.24;  2 for 2.4
+		$s=(string)$a;
+		print($s); // 2.4
+	?>
+	<?php
+		$var = "30";
+		echo "The current datatype of var is: " . gettype($var) . "<br><br>";
+		$var = (int)$var;
+		echo "The current datatype of var is: " . gettype($var);
+		echo "<br>";
+	?>				
+
+-----------------------------------------------------------------------------------------------------------------------
+		<h2> Round Ceil Floor </h2>
+		<?php
+			$m=10;
+			$n=3;
+			$s=$m/$n;
+			echo round($s,3);
+		?>				
+                <?php
+			echo ceil(4.3);    // 5
+			echo ceil(9.999);  // 10
+			echo ceil(-3.14);  // -3
+		?>
+                <?php
+			echo round(3.4);         // 3
+			echo round(3.5);         // 4
+			echo round(3.6);         // 4
+			echo round(3.6, 0);      // 4
+			echo round(1.95583, 2);  // 1.96
+			echo round(1241757, -3); // 1242000
+			echo round(5.045, 2);    // 5.05
+			echo round(5.055, 2);    // 5.06
+		?>
+------------------------------------------------------------------------------------------------------------------------
 
 <h2>Special Characters</h2>
-<?php
-$x=10;
-EcHo "\$x is \ 10?"; // back slash
-echo "<br>";
-echo "Now this is $x";
-echo "<br>";
-echo "\'$x\'";
-?>
-
+			<?php
+			$x=10;
+			EcHo "\$x is \ 10?"; // back slash
+			echo "<br>";
+			echo "Now this is $x";
+			echo "<br>";
+			echo "\'$x\'";
+			?>
+-----------------------------------------------------------------------------------------------------------------------
 
 
 <h2>Constants</h2>
