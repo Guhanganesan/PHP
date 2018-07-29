@@ -20,6 +20,8 @@
 	  }
 	  
 	  $object = new RBI();
+          # RBI() is the default constructor of the class
+          
 	  $object->rate();
 ?>
 
