@@ -2,6 +2,8 @@
     
     class Anna
 	 {
+		 static $name="Anna";
+		 const  mobile=8698;
 		 static  function katravai()
 		 {
 			echo "Katravai <br>";
@@ -25,11 +27,13 @@
 	 }
 	 Periyar::puratchi();
 	 Periyar::katravai();
+	 print Periyar::$name;
+	 print Periyar::mobile;
+	 
 ?>
-
 
 Result:
 
 Katravai 
-Katravai Patravai
+Katravai PatravaiAnna8698
 
