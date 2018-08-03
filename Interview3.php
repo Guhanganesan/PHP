@@ -55,6 +55,20 @@
 	   }
 	   
 	   getValue();
+
+
+         $sum=1;
+         function fact($i)
+	 {   global $sum;
+	     $sum=$sum*$i;
+		 return $sum;
+	 }
+	 
+	 for ($j=1; $j<=5; $j++)
+	 {
+		 $out=fact($j);
+	 }
+	 echo $out;
 ?>
 
 Result:
@@ -66,3 +80,4 @@ Hi
 77
 120
 Guhan
+120
