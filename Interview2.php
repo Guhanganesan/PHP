@@ -35,6 +35,16 @@
 	   echo $n;
 ?>
 
+<?php
+           // Remove Duplicates
+           $name="Payilagam";
+	   $arr=str_split($name);
+           print_r($arr);
+	   $unique=array_unique($arr);
+	   print_r($unique);
+	   echo implode("",$unique);
+?>
+
 
 
 Result:
