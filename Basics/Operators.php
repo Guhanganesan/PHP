@@ -14,6 +14,27 @@ The concept of hypertext was central to the creation of the World Wide Web. Thro
 
 ------------------------Variable and Operators --------------
 <?php
+     $a=10;
+	 echo $a."<br>";
+	 $a=20;
+	 echo $a."<br>";
+	 echo $a++."<br>";;//post increment
+	 echo $a."<br>";
+	 echo ++$a."<br>";
+	 define('x',10);
+	 echo x."<br>";
+	 define('x',20);
+	 echo x."<br>";
+	 static $x=20;
+	 echo $x."<br>";
+	 static $x=40;
+	 echo $x."<br>";
+?>
+
+<br><br>
+
+
+<?php
      $x=10;
 	 $y=20;
 	 
