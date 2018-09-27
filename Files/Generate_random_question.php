@@ -6,10 +6,10 @@ table, th, td {
 </style>
 <?php
    $file=file_get_contents("Guhan.txt");
-   //print_r($file);
    
-   $arr= preg_split('/\s+/', $file);
-   print_r($arr);
+  $arr= preg_split('/[\n\r]+/',$file);
+  
+   //print_r($arr);
    
    shuffle($arr);
   
@@ -22,6 +22,5 @@ table, th, td {
 	  }
 	  echo "</table>";
    
-   
+  
 ?>
-
