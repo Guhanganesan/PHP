@@ -283,11 +283,58 @@ Using for loop<br>
 <?php
 	$base = array("orange", "banana", "apple", "raspberry");
 	$replacements = array(0 => "pineapple", 4 => "cherry",2=>"mango");
-
 	$basket = array_replace($base, $replacements);
 	print_r($basket);
-
 	//Array ( [0] => pineapple [1] => banana [2] => mango [3] => raspberry [4] => cherry )
+
+	//Array count distinct values
+	$a=array("A","Cat","Dog","A","Dog");
+	print_r(array_count_values($a));
+	//Array ( [A] => 2 [Cat] => 1 [Dog] => 2 )
+
+	//Array Difference
+	$a1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+	$a2=array("e"=>"red","f"=>"green","g"=>"orange");
+	$result=array_diff($a1,$a2);
+	print_r($result); //Array ( [c] => blue [d] => yellow )
+
+	//Array Filter
+	function odd($var)
+	{
+	    // returns whether the input integer is odd
+	    return $var & 1;
+	}
+
+	function even($var)
+	{
+	    // returns whether the input integer is even
+	    return !($var & 1);
+	}
+
+	$array1 = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5];
+	$array2 = [6, 7, 8, 9, 10, 11, 12];
+
+	echo "Odd :\n";
+	print_r(array_filter($array1, "odd"));
+	echo "Even:\n";
+	print_r(array_filter($array2, "even"));
+	//Odd : Array ( [a] => 1 [c] => 3 [e] => 5 ) Even: Array ( [0] => 6 [2] => 8 [4] => 10 [6] => 12 )
+
+	//Exchange the key and value
+	$a1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+	$result=array_flip($a1);
+	print_r($result);
+	//Array ( [red] => a [green] => b [blue] => c [yellow] => d )
+
+	//Intersection
+	$a1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+	$a2=array("e"=>"red","f"=>"green","g"=>"blue");
+	$result=array_intersect($a1,$a2);
+	print_r($result);
+	//Array ( [a] => red [b] => green [c] => blue )
+
+	
+
 
 ?>
 
