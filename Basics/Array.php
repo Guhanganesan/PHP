@@ -333,7 +333,27 @@ Using for loop<br>
 	print_r($result);
 	//Array ( [a] => red [b] => green [c] => blue )
 
+	//Walk through key values
+	function myfunction($value,$key)
+	{
+	echo "The key $key has the value $value<br>";
+	}
+	$a=array("a"=>"red","b"=>"green","c"=>"blue");
+	array_walk($a,"myfunction");
 	
+	//Convert list of variables
+	$my_array = array("Dog","Cat","Horse");
+	list($a, $b, $c) = $my_array;
+	echo "I have several animals, a $a, a $b and a $c.";
+	//I have several animals, a Dog, a Cat and a Horse.
+
+	//Current, next, previous
+	$people = array("Peter", "Joe", "Glenn", "Cleveland");
+	echo current($people) . "<br>";
+	echo next($people). "<br>";
+	echo next($people). "<br>";
+	echo prev($people);
+        //Peter Joe Glen Joe
 
 
 ?>
