@@ -5,14 +5,12 @@ h2{color:blue;}
 </style>
 <h2>Array</h2>
 <?php
-		$arr = array(1,2,3,4);
-		print_r($arr);
-
-		$arr[0] = 10;
-		$arr[1] = 20;
-		$arr[2] = 30;
-
-		print_r($arr);
+	$arr = array(1,2,3,4);
+	print_r($arr);
+	$arr[0] = 10;
+	$arr[1] = 20;
+	$arr[2] = 30;
+	print_r($arr);
 ?>
 
 <h2>Indexed Array</h2>
@@ -76,13 +74,13 @@ Using for loop<br>
       
 	  // echo $x[0]['name'];
       
-      foreach($x as $y)
-      {
-           foreach($y as $z)
-           {
-               echo $z."<br>";
-           }
-      }
+	      foreach($x as $y)
+	      {
+		   foreach($y as $z)
+		   {
+		       echo $z."<br>";
+		   }
+	      }
 ?>
 <h2>Sorting Arrays</h2>
 
@@ -106,41 +104,41 @@ Using for loop<br>
 ?>
 <h2>Ascending Order by values</h2>
 <?php
-     $x=array("S"=>20,"M"=>10,"A"=>15,"Z"=>5,"P"=>30,"K"=>25);
-     asort($x);
-     print_r($x);
+     	$x=array("S"=>20,"M"=>10,"A"=>15,"Z"=>5,"P"=>30,"K"=>25);
+     	asort($x);
+     	print_r($x);
      
 ?>
 <h2>Descending Order by values</h2>
 <?php
-     $x=array("S"=>20,"M"=>10,"A"=>15,"Z"=>5,"P"=>30,"K"=>25);
-     arsort($x);
-     print_r($x);
+     	$x=array("S"=>20,"M"=>10,"A"=>15,"Z"=>5,"P"=>30,"K"=>25);
+     	arsort($x);
+     	print_r($x);
      
 ?>
 <h2>Ascending Order by key</h2>
 <?php
-     $x=array("S"=>20,"M"=>10,"A"=>15,"Z"=>5,"P"=>30,"K"=>25);
-     ksort($x);
-     print_r($x);
+     	$x=array("S"=>20,"M"=>10,"A"=>15,"Z"=>5,"P"=>30,"K"=>25);
+     	ksort($x);
+     	print_r($x);
 ?>
 <h2>Descending Order by key</h2>
 <?php
-     $x=array("S"=>20,"M"=>10,"A"=>15,"Z"=>5,"P"=>30,"K"=>25);
-     krsort($x);
-     print_r($x);
+     	$x=array("S"=>20,"M"=>10,"A"=>15,"Z"=>5,"P"=>30,"K"=>25);
+     	krsort($x);
+     	print_r($x);
 ?>
 <h2>Array Length</h2>
 <?php
-     $x=array("S"=>20,"M"=>10,"A"=>15,"Z"=>5,"P"=>30,"K"=>25);
-     echo count($x);
+     	$x=array("S"=>20,"M"=>10,"A"=>15,"Z"=>5,"P"=>30,"K"=>25);
+     	echo count($x);
 ?>
 <h2>Array Combine</h2>
 <?php
-     $x=array("S","M","A","Z","P","K");
-     $y=array(10,20,30,40,50,60);
-     $z=array_combine($x,$y);//combines key value pair
-     print_r($z);
+     	$x=array("S","M","A","Z","P","K");
+     	$y=array(10,20,30,40,50,60);
+     	$z=array_combine($x,$y);//combines key value pair
+     	print_r($z);
     
 ?>
 
