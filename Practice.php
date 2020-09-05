@@ -11,6 +11,7 @@ ____________________________________________
 $x = 'Payilagam';
 echo 'The variable \$x contains
  \' $x \' \" \\';   ?>
+echo '$x'; // Res: $x
 Ouput:
 The variable \$x contains ' $x ' \" \
 ____________________________________________
@@ -27,10 +28,21 @@ run(); if (10==10){ function run(){
 Output:
 Fatal error: Call to undefined function run() 
 ____________________________________________
-5) <?php if (0==0){function run()
-{ echo 'Welcome';    }    }
-run();    go();     function go(){
- echo 'Come'; }?>
+5) <?php 
+if (0==0){
+  function run(){ 
+  	echo 'Welcome';
+  }   
+}
+run(); 
+go();
+function go(){
+ echo 'Come'; 
+ }
+Output:-
+WelcomeCome
+?>
+
 6) <?php function run($a, $b){
  echo "a = $a, b = $b";}
 run(10,20); ?>
