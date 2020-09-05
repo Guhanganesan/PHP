@@ -48,11 +48,11 @@ We are using key for instead of using indexed value
      
       foreach($x as $y)
       {
-          echo $y."<br>";
+          echo $y."<br>"; //prints value only
           
       }
 	  	  
-	  foreach(array_keys($x) as $paramName)
+      foreach(array_keys($x) as $paramName)
       echo $paramName . "<br>";
 ?>
 <h2>Multi dimensional Array</h2>
@@ -88,20 +88,20 @@ Using for loop<br>
 
 <h2>Sort</h2>
 <?php
-     $x=array("S","M","A","Z","P","K");
-     sort($x);
-     print_r($x);
-	 echo "<br>";
-	 echo $x[0]."<br>";
-     echo $x[3]."<br>";
+     	$x=array("S","M","A","Z","P","K");
+     	sort($x);
+     	print_r($x);
+	echo "<br>";
+	echo $x[0]."<br>";
+     	echo $x[3]."<br>";
 ?>
 <h2>Reverse</h2>
 <?php
-     $x=array("S","M","A","Z","P","K");
-     rsort($x);
-     print_r($x);
-	 echo $x[0]."<br>";
-     echo $x[3]."<br>";
+     	$x=array("S","M","A","Z","P","K");
+     	rsort($x);
+     	print_r($x);
+  	echo $x[0]."<br>";
+     	echo $x[3]."<br>";
      
 ?>
 <h2>Ascending Order by values</h2>
@@ -146,146 +146,150 @@ Using for loop<br>
 
 <h2>Array reverse</h2>
 <?php
-// reverse by key
-$a=array("a"=>"Volvo","b"=>"BMW","c"=>"Toyota");
-print_r(array_reverse($a));
+	// reverse by key
+	$a=array("a"=>"Volvo","b"=>"BMW","c"=>"Toyota");
+	print_r(array_reverse($a));
 ?> 
 
 <h2>Array search</h2>
 <?php
-$a=array("a"=>"red","b"=>"green","c"=>"blue");
-echo array_search("red",$a);
+	$a=array("a"=>"red","b"=>"green","c"=>"blue");
+	echo array_search("red",$a);
 ?> 
 
 <h2>Array Fill</h2>
 <?php
-     $z=array_fill(5,4,"D");// parameter 1 and 2 should be an integer, strat from //[5] and fill 4 elements
-     print_r($z);
+     	$z=array_fill(5,4,"D");// parameter 1 and 2 should be an integer, strat from //[5] and fill 4 elements
+     	print_r($z);
 ?>
 <h2>Array Shuffle</h2>
 <?php
-     $x=array("A","B","C","D","E");
-     shuffle($x);
-     print_r($x);
+     	$x=array("A","B","C","D","E");
+     	shuffle($x);
+     	print_r($x);
 ?>
 <h2>Array Push</h2>
 <?php
-     //insert into last sides
-     $x=array("A","B","C","D","E");
-     array_push($x,"F","G");
-     print_r($x);
+    	 //insert into last sides
+    	 $x=array("A","B","C","D","E");
+     	 array_push($x,"F","G");
+     	 print_r($x);
 ?>
 <h2>Array Pop</h2>
 <?php
-//Remove from last sides
-$a=array("red","green","blue");
-array_pop($a);
-print_r($a);
+	//Remove from last sides
+	$a=array("red","green","blue");
+	array_pop($a);
+	print_r($a);
 ?> 
 <h2>Array Shift</h2>
 
 <?php
-// Remove from first
-$a=array("red","green","blue");
-array_shift($a);
-print_r($a);
+	// Remove from first
+	$a=array("red","green","blue");
+	array_shift($a);
+	print_r($a);
 ?> 
 <h2>Array Unshift</h2>
 <?php
-// add elements into first sides
-$a=array("red","green","blue");
-array_unshift($a, "orange","black");
-print_r($a);
+	// add elements into first sides
+	$a=array("red","green","blue");
+	array_unshift($a, "orange","black");
+	print_r($a);
 ?>
 
 <h2>Array Slice</h2>
 <?php
-$a=array("red","green","blue");
-$a=array_slice($a,0,2);       //Array ( [0] => red [1] => green )
-print_r($a);
+	$a=array("red","green","blue");
+	$a=array_slice($a,0,2);       //Array ( [0] => red [1] => green )
+	print_r($a);
 ?> 
 <h2>Array Unique</h2>
 <?php
-$a=array("red","green","blue","blue","red");
-$a=array_unique($a);
-print_r($a);
+	$a=array("red","green","blue","blue","red");
+	$a=array_unique($a);
+	print_r($a);
 ?> 
 <h2> array map</h2>
 <?php
-function myfunction($v)
-{
-  return($v*$v);
-}
+	function myfunction($v)
+	{
+	  return($v*$v);
+	}
 
-$a=array(1,2,3,4,5);
-print_r(array_map("myfunction",$a));
-/*
-#include <stdio.h>
-void display(int age)
-{
-    printf("%d", age);
-}
+	$a=array(1,2,3,4,5);
+	print_r(array_map("myfunction",$a));
+	/* Example for C
+	#include <stdio.h>
+	void display(int age)
+	{
+	    printf("%d", age);
+	}
 
-int main()
-{
-    int ageArray[] = { 2, 3, 4 };
-    display(ageArray[2]); //Passing array element ageArray[2] only.
-    return 0;
-}
+	int main()
+	{
+	    int ageArray[] = { 2, 3, 4 };
+	    display(ageArray[2]); //Passing array element ageArray[2] only.
+	    return 0;
+	}
 
-*/
+	*/
 ?> 
 <h2> array merge</h2>
 <?php
-$a1=array("red","green");
-$a2=array("blue","yellow");
-print_r(array_merge($a1,$a2));
+	$a1=array("red","green");
+	$a2=array("blue","yellow");
+	print_r(array_merge($a1,$a2));
+	//Array ( [0] => red [1] => green [2] => blue [3] => yellow )
 ?> 
 
 <h2> array_multisort</h2>
 <?php
-$a=array("Dog","Cat","Horse","Bear","Zebra");
-array_multisort($a);
-print_r($a);
+	$a=array("Dog","Cat","Horse","Bear","Zebra");
+	array_multisort($a);
+	print_r($a);
+	//Array ( [0] => Bear [1] => Cat [2] => Dog [3] => Horse [4] => Zebra )
 ?> 
 <br><br>
 <?php
-$ar1 = array(10, 100, 100, 0);
-$ar2 = array(1, 3, 2, 4);
-array_multisort($ar2, $ar1);
-print_r($ar2);
-print_r($ar1);
-
+	//Sort more than one array
+	$ar1 = array(10, 100, 100, 0);
+	$ar2 = array(1, 3, 2, 4);
+	array_multisort($ar2, $ar1);
+	print_r($ar2);
+	print_r($ar1);
+	//Array ( [0] => 1 [1] => 2 [2] => 3 [3] => 4 ) Array ( [0] => 10 [1] => 100 [2] => 100 [3] => 0 )
 ?>
 <h2>Array_product</h2>
 <?php
-$a=array(5,5);
-echo(array_product($a));
+	$a=array(5,5);
+	echo(array_product($a));
 ?> 
 <h2>Array random</h2>
 <?php
-$a=array("red","green","blue","yellow","brown");
-$r=array_rand($a,3);
-echo $a[$r[0]]."<br>";
-echo $a[$r[1]]."<br>";
-echo $a[$r[2]];
+	$a=array("red","green","blue","yellow","brown");
+	$r=array_rand($a,3);
+	echo $a[$r[0]]."<br>";
+	echo $a[$r[1]]."<br>";
+	echo $a[$r[2]];
 ?> 
 <h2>Array replace</h2>
 <?php
-$a1=array("red","green");
-$a2=array("blue","yellow");
-print_r(array_replace($a1,$a2));
+	$a1=array("red","green");
+	$a2=array("blue","yellow");
+	print_r(array_replace($a1,$a2));
+	//Array ( [0] => blue [1] => yellow )
 ?> 
 
 <h2>Array replace</h2>
 <?php
-$base = array("orange", "banana", "apple", "raspberry");
-$replacements = array(0 => "pineapple", 4 => "cherry",2=>"mango");
+	$base = array("orange", "banana", "apple", "raspberry");
+	$replacements = array(0 => "pineapple", 4 => "cherry",2=>"mango");
 
-$basket = array_replace($base, $replacements);
-print_r($basket);
+	$basket = array_replace($base, $replacements);
+	print_r($basket);
 
-//Array ( [0] => pineapple [1] => banana [2] => mango [3] => raspberry [4] => cherry )
+	//Array ( [0] => pineapple [1] => banana [2] => mango [3] => raspberry [4] => cherry )
 
 ?>
 
