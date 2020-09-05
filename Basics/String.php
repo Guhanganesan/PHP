@@ -39,7 +39,7 @@ echo "<br>";
 string with backslashes in front of predefined characters. </p>
 <?php 
 $str = addslashes('This is "my" book');
-echo($str); 
+echo($str);  //This is \"my\" book
 ?>
 
 <h2> bin2hex() </h2>
@@ -77,7 +77,7 @@ echo chr(0x52) . "<br>"; // Hex value
 <p>The chunk_split() function splits a string into a series of smaller parts.</p>
 <?php
 $str = "Hello world!";
-echo chunk_split($str,2,".");
+echo chunk_split($str,2,"/");  //  He/ll/o /wo/rl/d!/
 ?>
 
 <h2> convert_uuencode()</h2>
@@ -98,8 +98,8 @@ echo convert_uudecode($str);
 <p>how many times an ASCII character occurs in a string, 
 or which characters that have been used or not been used in a string).</p>
 <?php
-$str = "Hello# World!";
-echo count_chars($str,3);
+$str = "HeLlo# Wor*lD!";
+echo count_chars($str,3) //!#*DHLWelor
 ?>
 
 <h2>Join</h2>
@@ -109,18 +109,25 @@ echo join(" ",$arr)."<br>";
 echo join("+",$arr)."<br>";
 echo join("-",$arr)."<br>"; 
 echo join("X",$arr);
+/*
+Hello World! Beautiful Day!
+Hello+World!+Beautiful+Day!
+Hello-World!-Beautiful-Day!
+HelloXWorld!XBeautifulXDay!
+*/
+
 ?>
 
 <h2>lcfirst()</h2>
 <p></p>
 <?php
-echo lcfirst("Hello world!");
+echo lcfirst("Hello World!"); //hello World!
 ?>
 
 <h2> md5()</h2>
 <?php
-      $x="Guhan";
-	  echo md5($x);
+$x="Guhan";
+echo md5($x);
 ?>
 <h2> crypt()</h2>
 
@@ -139,35 +146,35 @@ echo $hash
    return a one-length array of the original string.*/
 
 $x = "He is my friend";
-print_r (explode(" ",$x));
+print_r (explode(" ",$x)); //Array ( [0] => He [1] => is [2] => my [3] => friend )
 ?>
 
 
 <h2> sha1</h2>
 
 <?php
-      $x="Guhan";
-	  echo sha1($x);
+$x="Guhan";
+echo sha1($x);
 ?>
 
 <h2>String Compare </h2>
 
 <?php
-     $x="Guhan";
-	 $y="Guhan"; //  guhan-false
-	 if($x==$y)
-	 {
-		 echo "True";
-	 }
-	 else
-	 {
-		 echo "False";
-	 }
-
+$x="Guhan";
+$y="Guhan"; //  guhan-false
+if($x==$y){
+ echo "True";
+}
+else{
+ echo "False";
+}
 ?>
+
 <h2> Substring</h2>
 <?php
-     echo substr("Payilagam",-3,2);
+echo substr("Payilagam",-3,2); //ga
+echo substr("Payilagam",3)."<br>"; //ilagam
+echo substr("Payilagam", 2, 6); //yilaga -> number of elemets are 6
 ?>
 <br><br>
 
@@ -184,68 +191,33 @@ echo $rest3."<br>";
 <h2> Pasre String </h2>
 
 <?php
-parse_str("My Value=Something");
-echo $My_Value; // Something
+parse_str("Value=Something&name=guhan&age=30");
+echo $Value." ".$name." ".$age; //Something guhan 30
 ?>
 
 <h2> Sub String Replace </h2>
 <?php
 $var = "Payilagam";
-echo substr_replace($var,"PPP",2,3);
+echo substr_replace($var,"PPP",2,3); //PaPPPagam
 ?>
 
 <h2> String Shuffle</h2>
-
-
 <?php
 $str = 'abcdef';
 $shuffled = str_shuffle($str);
 
 // This will echo something like: bfdaec
 echo $shuffled;
+
+$str = "An example of a long word is: Supercalifragulistic";
+echo wordwrap($str,15,"<br>\n"); //The wordwrap() function wraps a string into new lines when it reaches a specific length.
+
+//String compare 
+echo strcmp("Hello world!","hello world!"); //-32 -> returns 0 if true
+
+echo nl2br("One line.\n Another line."); // Apply line breaks
+
+
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
