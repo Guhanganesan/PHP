@@ -42,13 +42,13 @@ function go(){
 Output:-
 WelcomeCome
 ?>
-
+---------------------------------------------
 6) <?php function run($a, $b){
  echo "a = $a, b = $b";}
 run(10,20); ?>
 Output:
-WelcomeCome
-
+a = 10, b = 20
+---------------------------------------------
 7) <?php
 function Add($one,$two){
  $total = $one + $two;
@@ -64,6 +64,14 @@ eval($z);
 echo $evaly; ?>
 Output:
 Alagar5+5
+
+Note:-
+$y = 'Alagar5+5'; 
+$z = "$y";
+echo $z; //Alagar5+5
+$z= '$y';
+echo $z; //$z;
+
 -------------------------------------------------
 9) <?php $str = <<<Sample
 this is a sample string
@@ -73,10 +81,11 @@ Echo $str; ?>
 Output:
 this is a sample string A sample string
 ------------------------------------------------
-10) <?php   $x = 0;
-  while ($x <= 3){
-  echo "$x, ";
-  $x++;  } ?>
+10) <?php   
+$x = 0;
+while ($x <= 3){
+echo "$x, ";
+$x++;  } ?>
 Output:
 0, 1, 2, 3,
 ------------------------------------------------
@@ -91,7 +100,7 @@ Is True
 if ($a == $b){  echo 'a is equal to b.';  }
 if ($a === $b){  echo 'a is identical and equal to b.'; }?>
 Output:  a is equal to b.
-
+-----------------------------------------------------------
 13)  <?php $a = 1; if (!isset($a))
 {    echo '$a is not set';  }
 if ($a != 0)
@@ -129,49 +138,78 @@ Output2
 Output:
 12
 ----------------------------------------------------------
-18) <?php   $x = 10;    switch ($x) {
+18) <?php   
+$x = 10;    
+switch ($x) {
  case '12': echo 'Output1';    break;
  default: echo 'Output2';      break;
- case '11': echo 'Output3';    break;    }    ?>
+ case '11': echo 'Output3';    break;   
+}    ?>
 Output:
 Output2
 -----------------------------------------------------------
-19) <?php for ($v=0;$v<=10;$v++){
+19) <?php 
+for ($v=0;$v<=10;$v++){
  echo $v;
  if ($v == 5){   continue;   }
- if ($v == 8){   break;    }   echo ',';   }  ?>
+ if ($v == 8){   break;    }  
+echo ',';   
+}
+?>
 Output:
 0,1,2,3,4,56,7,8
 -----------------------------------------------------------
 20) <?php
 $a = array('Anbu' => 20, 'Ragu' => 24);
-foreach ($a as $m => $n){  echo "$m - $n";
- echo '<br>';}?>
+foreach ($a as $m => $n){ 
+	echo "$m - $n";
+ 	echo '<br>';
+}
+?>
 Output:
 Anbu - 20
 Ragu - 24
 ----------------------------------------------------------
-21) <?php  $x=0;   while(1==1){
- while(0==0){    $x++;     echo $x;
-break 2; }   }   ?>
+21) <?php  
+$x=0;   
+while(1==1){
+ while(0==0){
+	 $x++;     
+	 echo $x;
+	break 2; //breaks two levels
+ }   
+}   
+?>
 Output:
 1
 ----------------------------------------------------------
-22) <?php for ($x=1;$x<=10;$x++)
-{  if ($x == 5){  continue;   } 
- echo $x;    }   ?>
+22) <?php 
+for ($x=1;$x<=10;$x++)
+{  
+	if ($x == 5)
+	{  
+	continue; 
+	} 
+	echo $x;  
+}   
+?>
 Output:
 1234678910
 -----------------------------------------------------------
 23) <?php
 $x = '';   $y = 0;    $z = NULL;
-var_dump( is_null($x), is_null($y), is_null($z) );?>
+var_dump( is_null($x), is_null($y), is_null($z) );
+?>
 Output:
 bool(false) bool(false) bool(true)
 -----------------------------------------------------------
-24) <?php   $x = 'Payilagam';
-var_dump( isset($x) );    echo '<br>'; 
-unset($x);    var_dump( isset($x) );   ?>
+24) <?php   
+$x = 'Payilagam';
+var_dump( isset($x) );
+echo '<br>'; 
+unset($x);    
+var_dump( isset($x) );   
+?>
 Output:
 bool(true) 
 bool(false)
@@ -185,19 +223,22 @@ bool(true) bool(true)
 -----------------------------------------------------------
 26) <?php
 $x = 0;        $y= '0';
-var_dump( is_int($x), is_int($y) );?>
+var_dump( is_int($x), is_int($y) );
+?>
 Output:
 bool(true) bool(false)
 ---------------------------------------------------
 27) <?php
 $x = 0;
 $y = '0';
-var_dump( is_string($x), is_string($y) );  ?>
+var_dump( is_string($x), is_string($y) ); 
+?>
 Output:
 bool(false) bool(true)
 ---------------------------------------------------
-28) <?php   $x = 10;      $y = '10';
-var_dump( is_numeric($x), is_numeric($y) );
+28) <?php  
+$x = 10;      $y = '10';
+var_dump( is_numeric($x), is_numeric($y) ); // numerically true
 ?>
 Output:
 bool(true) bool(true)
@@ -211,34 +252,44 @@ int(10) string(5) "Guhan" array(1) { [0]=> string(4) "Anbu" } bool(true)
 -----------------------------------------------------------
 30) <?php
 $x = array( 'A', 'B', 'C' );
-print_r($x); ?>
+print_r($x); 
+?>
 Output:
 Array ( [0] => A [1] => B [2] => C )
 -----------------------------------------------------------
-31) <?php   $x = array( 'AA', 'BCD', 'CAB' );
+31) <?php   
+$x = array( 'AA', 'BCD', 'CAB' );
 $O = serialize($x);
-echo $O;?>
+echo $O;
+?>
 Output:
 a:3:{i:0;s:2:"AA";i:1;s:3:"BCD";i:2;s:3:"CAB";}
 -----------------------------------------------------------
-32) <?php $r = 45.67;    $s = "145the words";
+32) <?php 
+$r = 45.67;    $s = "145the words";
 $t = "0025";
-var_dump ( floatval($r), floatval($s), floatval($t) );?>
+var_dump ( floatval($r), floatval($s), floatval($t) );
+?>
 Output:
 float(45.67) float(145) float(25)
 -----------------------------------------------------------
-33) <?php   $s = ' He said, "He is clever!"';
+33) <?php   
+$s = ' He said, "He is clever!"';
 $s = addslashes($s); echo $s;
-$s = stripslashes($s);   echo $s;   ?>
+$s = stripslashes($s);  echo $s;  
+?>
 Output:
 He said, \"He is clever!\" He said, "He is clever!"
 -----------------------------------------------------------
-34) <?php   $s = 'Vaanavil Alagu!';  
+34) <?php   
+$s = 'Vaanavil Alagu!';  
 $s = chunk_split($s, 3);
-var_dump($s);   echo nl2br($s); 
+var_dump($s);   
+echo nl2br($s); 
 echo 'I am on a new line?';      ?>
 Output:
-string(25) "Vaa nav il Ala gu! " Vaa
+string(25) "Vaa nav il Ala gu! " 
+Vaa
 nav
 il 
 Ala
@@ -248,8 +299,10 @@ I am on a new line?
 35) <?php
 $s = 'Mazhai Kaalam!';
 $s = chunk_split($s, 3);
-echo '<pre>';    echo $s;     
-echo '</pre>';      ?>
+echo '<pre>';    
+echo $s;     
+echo '</pre>';      
+?>
 Output:
 Maz
 hai
@@ -260,7 +313,8 @@ m!
 36) <?php
 $x = 'He is my dear friend!!';
 $s = wordwrap($x, 8);
-echo nl2br($s);      ?>
+echo nl2br($s);      
+?>
 Output:
 He is my
 dear
